@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    background-image: url('images/xmas-fade.jpg');
+    background-size: cover;
+    color: white;
+    font-family: 'Poppins', sans;
+    letter-spacing: .08rem;
+}
+
+/* general */
+
+.flex {
+    display: flex;
+}
+
+/* text */
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    margin: 1.5rem 0 0 0;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+/* header */
+
+.header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* game elements */
+
+.game-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.blanks-display-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 3rem;
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 5px;
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+}
+
+.player-keyboard {
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 240px;
+    width: 280px;
+    flex-wrap: wrap;
+    gap: .2rem;
+    padding: .2rem;
+}
+
+.lives-display-box{
+    font-size: 1.3rem;
+}
+
+/* buttons */
+
+button.letter-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    font-size: 1.2rem;
+}
+
+button.letter-btn[disabled] {
+    opacity: 0.6;
+}
+
+button.main-btn {
+    width: 140px;
+    padding: .8rem .2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #333
+}
+
+button.main-btn:hover, button.main-btn:active{
+    background-color:#666;
+    color: white;
+}
+button.reset-btn {
+    display: none;
+}
+
+button.used {
+    background-color: #666;
+    color: #999;
+}
