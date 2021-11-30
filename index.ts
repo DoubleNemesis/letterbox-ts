@@ -10,3 +10,28 @@ let lives:number = 10
 const livesEmoji:string = `&#127873;`
 const winMessage:string = `You Win! &#127881;`
 const loseMessage:string = `Game Over. &#128534;`
+
+
+function createKeyboard():void{
+    const unicodeA:number = 97
+    const unicodeZ:number = 122
+
+    for(let i=unicodeA; i<=unicodeZ; i++){
+        let character = String.fromCharCode(i);
+        let letterButton =  document.createElement('button')
+        letterButton.innerText = character
+        letterButton.className = 'letter-btn'
+        letterButton.setAttribute('id', character)
+        letterButton.disabled = true
+        letterButton.addEventListener('click', handleGuess)
+        playerKeyboard.appendChild(letterButton)
+    }
+}
+createKeyboard()
+
+function handleGuess(){
+}
+
+function handleStart():void{
+    console.log('eho')
+}
