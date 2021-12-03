@@ -51,7 +51,7 @@ function handleStart():void{
     })
 }
 
-function handleGuess(e:PointerEvent):void{
+function handleGuess(e:Event):void{
     console.log((<HTMLButtonElement>e.target).id) 
     console.log(e) 
     const stringToCheck:string = (<HTMLButtonElement>e.target).id
@@ -66,7 +66,7 @@ function handleGuess(e:PointerEvent):void{
                 playerAttempt = playerAttemptArray.join('')
             }
         }
-        // checkWin()
+        checkWin()
     }
     else {
         lives--
@@ -77,6 +77,15 @@ function handleGuess(e:PointerEvent):void{
     blanksDisplayBox.innerText = playerAttempt
 }
 
+function checkWin():null {
+    if (wordToGuess === playerAttempt) {
+        livesDisplayBox.innerHTML = winMessage
+        blanksDisplayBox.style.color = "limegreen"
+    }
+    else {
+        return
+    }
+}
 
 function renderLivesLeftEmojis(){
 
